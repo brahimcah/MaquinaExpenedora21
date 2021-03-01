@@ -17,17 +17,32 @@ public class Stock {
         NomProducte[9] = "Palmera";
     }
 
-    static void NomsProductes(double[] NomsProductes){
+    static void PreusProductes(double[] PreusProductes){
         //Noms dels Productes
-        double  [] NomProducte = new double [10];
-        NomProducte[0] = 1.50;
-        NomProducte[1] = 1;
-        NomProducte[2] = 2;
-        NomProducte[3] = 0.75;
-        NomProducte[4] = 1.85;
-        NomProducte[5] = 1.55;
-        NomProducte[6] = 2.50;
-        NomProducte[7] = 1;
-        NomProducte[8] = 1.10;
-        NomProducte[9] = 1.25;
+        double  [] PreuProducte = new double [10];
+        PreuProducte[0] = 1.50;
+        PreuProducte[1] = 1;
+        PreuProducte[2] = 2;
+        PreuProducte[3] = 0.75;
+        PreuProducte[4] = 1.85;
+        PreuProducte[5] = 1.55;
+        PreuProducte[6] = 2.50;
+        PreuProducte[7] = 1;
+        PreuProducte[8] = 1.10;
+        PreuProducte[9] = 1.25;
+    }
+
+    static void StocksProductes(int[] StocksProductes){
+        //Noms dels Productes
+        int[] StockProducte = new int [10];
+        StockProducte[0] = 20;
+        StockProducte[1] = 12;
+        StockProducte[2] = 20;
+        StockProducte[3] = 07;
+        StockProducte[4] = 18;
+        StockProducte[5] = 15;
+        StockProducte[6] = 5;
+        StockProducte[7] = 1;
+        StockProducte[8] = 11;
+        StockProducte[9] = 12;
     }

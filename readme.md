@@ -5,4 +5,6 @@
 --- Manteniments ---
 
 --- Stock ---
-NomProducte
+NomsProductes --> NomProducte
+PreusProductes --> PreuProducte
+StocksProductes --> StockProducte
