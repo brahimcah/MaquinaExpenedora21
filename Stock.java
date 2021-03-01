@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Stock {
     
-    public static void main(String[] args) throws Exception {
+    static void NomsProductes(String[] NomsProductes){
         //Noms dels Productes
         String[] NomProducte = new String[10];
         NomProducte[0] = "Chips Casolanes";
