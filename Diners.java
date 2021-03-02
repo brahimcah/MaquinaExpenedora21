@@ -27,13 +27,13 @@ public class Diners{
     public static int canvi(int preu){
 
 
-
+        
         /**
          * @method Comprovacio de si hem de tornar canvi al nostre client
          * 
          */
 
-        
+
 
 
 
