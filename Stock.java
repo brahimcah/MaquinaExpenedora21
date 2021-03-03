@@ -21,9 +21,9 @@ public class Stock {
         NomProducte[9] = "Palmera";
     }
 
-    public static void PreusProductes(double[] PreusProductes){
+    public static void PreusProductes(double[] PreuProducte){
         //Preus dels Productes
-        double  [] PreuProducte = new double [10];
+        PreuProducte = new double [10];
         PreuProducte[0] = 1.50;
         PreuProducte[1] = 1;
         PreuProducte[2] = 2;
@@ -36,9 +36,9 @@ public class Stock {
         PreuProducte[9] = 1.25;
     }
 
-    public static void StocksProductes(int[] StocksProductes){
+    public static void StocksProductes(int[] StockProducte){
         //Stock dels Productes
-        int[] StockProducte = new int [10];
+        StockProducte = new int [10];
         StockProducte[0] = 20;
         StockProducte[1] = 12;
         StockProducte[2] = 20;
