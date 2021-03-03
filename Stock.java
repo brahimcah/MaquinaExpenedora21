@@ -11,7 +11,7 @@ public class Stock {
         }
     }
 
-    public static void NomsProductes(String[] NomProducte){
+/*    public static void NomsProductes(String[] NomProducte){
         //Noms dels Productes
         NomProducte = new String[10];
         NomProducte[0] = "Chips Casolanes";
@@ -54,5 +54,5 @@ public class Stock {
         StockProducte[7] = 1;
         StockProducte[8] = 11;
         StockProducte[9] = 12;
-    }
+    }*/
 }
