@@ -2,9 +2,13 @@ import java.util.*;
 
 public class Stock {
     
-    static void NomsProductes(String[] NomsProductes){
+    public static void main(String[] args){
+        
+    }
+
+    public static void NomsProductes(String[] NomProducte){
         //Noms dels Productes
-        String[] NomProducte = new String[10];
+        NomProducte = new String[10];
         NomProducte[0] = "Chips Casolanes";
         NomProducte[1] = "Xocolata amb Ametlles";
         NomProducte[2] = "Coca-Cola";
@@ -17,8 +21,8 @@ public class Stock {
         NomProducte[9] = "Palmera";
     }
 
-    static void PreusProductes(double[] PreusProductes){
-        //Noms dels Productes
+    public static void PreusProductes(double[] PreusProductes){
+        //Preus dels Productes
         double  [] PreuProducte = new double [10];
         PreuProducte[0] = 1.50;
         PreuProducte[1] = 1;
@@ -32,8 +36,8 @@ public class Stock {
         PreuProducte[9] = 1.25;
     }
 
-    static void StocksProductes(int[] StocksProductes){
-        //Noms dels Productes
+    public static void StocksProductes(int[] StocksProductes){
+        //Stock dels Productes
         int[] StockProducte = new int [10];
         StockProducte[0] = 20;
         StockProducte[1] = 12;
@@ -46,3 +50,4 @@ public class Stock {
         StockProducte[8] = 11;
         StockProducte[9] = 12;
     }
+}
