@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Stock {
     
-     public static String nomProdcuteStock(int codi, String NomProducte[], Double PreuProducte[], int StockProducte[]){
+     public static String nomProducteStock(int codi, String NomProducte[], Double PreuProducte[], int StockProducte[]){
         
         if(StockProducte[codi] > 0 ){
              return NomProducte[codi];
