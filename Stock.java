@@ -2,8 +2,8 @@ import java.util.*;
 
 public class Stock {
     
-    public static void main(String[] args){
-        
+     static void nomProdcuteStock(String NomProducte[], Double PreuProducte[], int StockProducte[]){
+          
     }
 
     public static void NomsProductes(String[] NomProducte){
@@ -19,7 +19,7 @@ public class Stock {
         NomProducte[7] = "Filipinos";
         NomProducte[8] = "Magdalena";
         NomProducte[9] = "Palmera";
-    }
+        }
 
     public static void PreusProductes(double[] PreuProducte){
         //Preus dels Productes
