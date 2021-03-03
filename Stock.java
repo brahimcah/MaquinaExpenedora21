@@ -6,6 +6,8 @@ public class Stock {
         
         if(StockProducte[codi] > 0 ){
              return NomProducte[codi];
+        } else {
+            return "?";
         }
     }
 
