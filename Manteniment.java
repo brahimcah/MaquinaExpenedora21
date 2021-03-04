@@ -20,25 +20,23 @@ public class Manteniment{
                 case 10: System.exit(0);
             }
         }while(opcio!=1 && opcio!=2 && opcio!=10);
-
-
     }
+
     public static void repostarStock(){
         System.out.println("Tria producte a repostar: ");
         System.out.println();
 
-        application.impressio(application.NomProducte, application.PreuProducte, application.StockProducte);
-        // application.NomProducte[1]="Pollastre";
+        Application.impressio(Application.llistaNomProducte, Application.llistaPreuProducte, Application.llistaStockProducte);
         System.out.print("Codi producte: ");
         int codiRepostarStock = sc.nextInt();
         System.out.print("Introdueix quantitat a repostar: ");
         int quantitatRepostar = sc.nextInt();
         System.out.println();
 
-        application.StockProducte[codiRepostarStock] += quantitatRepostar;
+        Application.llistaStockProducte[codiRepostarStock] += quantitatRepostar;
         System.out.println("**********************CANVI REALITZAT**********************");
         System.out.println();
-        application.impressio(application.NomProducte, application.PreuProducte, application.StockProducte);
+        Application.impressio(Application.llistaNomProducte, Application.llistaPreuProducte, Application.llistaStockProducte);
     }
     public static void repostarMoneder(){
 
