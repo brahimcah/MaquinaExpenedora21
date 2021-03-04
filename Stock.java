@@ -1,58 +1,48 @@
-import java.util.*;
-
 public class Stock {
     
-     public static String nomProducteStock(int codi, String NomProducte[], int StockProducte[]){
+     public static String comprovacioStock(int codi){
         
-        if(StockProducte[codi] > 0 ){
-             return NomProducte[codi];
+        if(Application.llistaStockProducte[codi] > 0 ){
+             return Application.llistaNomProducte[codi];
         } else {
             return "?";
         }
     }
-
-/*    public static void NomsProductes(String[] NomProducte){
-        //Noms dels Productes
-        NomProducte = new String[10];
-        NomProducte[0] = "Chips Casolanes";
-        NomProducte[1] = "Xocolata amb Ametlles";
-        NomProducte[2] = "Coca-Cola";
-        NomProducte[3] = "Aigua 50ml";
-        NomProducte[4] = "ColaCao ml";
-        NomProducte[5] = "Galetes Veganes";
-        NomProducte[6] = "Sanwitch de Pavo";
-        NomProducte[7] = "Filipinos";
-        NomProducte[8] = "Magdalena";
-        NomProducte[9] = "Palmera";
-        }
-
-    public static void PreusProductes(double[] PreuProducte){
-        //Preus dels Productes
-        PreuProducte = new double [10];
-        PreuProducte[0] = 1.50;
-        PreuProducte[1] = 1;
-        PreuProducte[2] = 2;
-        PreuProducte[3] = 0.75;
-        PreuProducte[4] = 1.85;
-        PreuProducte[5] = 1.55;
-        PreuProducte[6] = 2.50;
-        PreuProducte[7] = 1;
-        PreuProducte[8] = 1.10;
-        PreuProducte[9] = 1.25;
+    
+    public static void assignacioNomProduces(){
+        Application.llistaNomProducte[0] = "Chips Casolanes";
+        Application.llistaNomProducte[1] = "Xocolata amb Ametlles";
+        Application.llistaNomProducte[2] = "Coca-Cola";
+        Application.llistaNomProducte[3] = "Aigua 50ml";
+        Application.llistaNomProducte[4] = "ColaCao ml";
+        Application.llistaNomProducte[5] = "Galetes Veganes";
+        Application.llistaNomProducte[6] = "Sanwitch de Pavo";
+        Application.llistaNomProducte[7] = "Filipinos";
+        Application.llistaNomProducte[8] = "Magdalena";
+        Application.llistaNomProducte[9] = "Palmera";
     }
-
-    public static void StocksProductes(int[] StockProducte){
-        //Stock dels Productes
-        StockProducte = new int [10];
-        StockProducte[0] = 20;
-        StockProducte[1] = 12;
-        StockProducte[2] = 20;
-        StockProducte[3] = 07;
-        StockProducte[4] = 18;
-        StockProducte[5] = 15;
-        StockProducte[6] = 5;
-        StockProducte[7] = 1;
-        StockProducte[8] = 11;
-        StockProducte[9] = 12;
-    }*/
+    public static void assignacioPreuProductes(){
+        Application.llistaPreuProducte[0] = 1.50;
+        Application.llistaPreuProducte[1] = 1;
+        Application.llistaPreuProducte[2] = 2;
+        Application.llistaPreuProducte[3] = 0.75;
+        Application.llistaPreuProducte[4] = 1.85;
+        Application.llistaPreuProducte[5] = 1.55;
+        Application.llistaPreuProducte[6] = 2.50;
+        Application.llistaPreuProducte[7] = 1;
+        Application.llistaPreuProducte[8] = 1.10;
+        Application.llistaPreuProducte[9] = 1.25;
+    }
+    public static void assignacioStockProductes(){
+        Application.llistaStockProducte[0] = 20;
+        Application.llistaStockProducte[1] = 12;
+        Application.llistaStockProducte[2] = 20;
+        Application.llistaStockProducte[3] = 07;
+        Application.llistaStockProducte[4] = 18;
+        Application.llistaStockProducte[5] = 15;
+        Application.llistaStockProducte[6] = 5;
+        Application.llistaStockProducte[7] = 1;
+        Application.llistaStockProducte[8] = 11;
+        Application.llistaStockProducte[9] = 12;
+    }
 }
