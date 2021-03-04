@@ -68,7 +68,7 @@ public class application{
                     System.exit(0);
                 }
             }else{
-                if(Stock.nomProdcuteStock(codi, NomProducte, PreuProducte, StockProducte)!="?"){//Comprovació de Stock, en cas d'haver Stock es seguirà amb el programa
+                if(Stock.nomProdcuteStock(codi, NomProducte, StockProducte)!="?"){//Comprovació de Stock, en cas d'haver Stock es seguirà amb el programa
                     if(Diners.diners(codi)>=0){//Comprovació de diners a introduir, en cas d'haver canvi i una introducció d'aquests correcte es retorna el producte
                         System.out.println("Aqui tens el teu producte" + NomProducte[codi]);
                     }else{
