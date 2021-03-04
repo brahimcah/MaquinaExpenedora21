@@ -9,5 +9,5 @@ public class monader {
      * */
     public static int[] StockMonedes = {18,23,20,15,18,15};
 
-    
-}
+    public static String comMonedesStock(int codi, int StockMonedes[]){
+    }
