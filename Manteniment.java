@@ -21,7 +21,10 @@ public class Manteniment{
 
     }
     public static void repostarStock(){
-        System.out.println("REPSOTAR STOCK");
+        for(int i=0;i<10;i++){
+            System.out.println("Tria producte a repostar: ");
+            // System.out.println("Producte: "+comprovacioNomProducte(i)+"  Codi: "+i)
+        }
     }
     public static void repostarMoneder(){
 
