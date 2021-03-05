@@ -12,31 +12,50 @@ public class Manteniment{
         System.out.println();
         int opcio = 0;
 
-        do{
+        do{ //Bucle en cas d'introduir un codi incorrecte.
             opcio = sc.nextInt();
-            switch(opcio){
+            switch(opcio){ //Switch de tria d'opcions.
                 case 1: repostarStock();
+                        break;
                 case 2: repostarMoneder();
-                case 10: System.exit(0);
+                        break;
+                case 10:break;
             }
         }while(opcio!=1 && opcio!=2 && opcio!=10);
-    }
 
+
+    }
     public static void repostarStock(){
         System.out.println("Tria producte a repostar: ");
         System.out.println();
 
         Application.impressio(Application.llistaNomProducte, Application.llistaPreuProducte, Application.llistaStockProducte);
+        System.out.println("Per sortir introduïr codi 99.");
         System.out.print("Codi producte: ");
-        int codiRepostarStock = sc.nextInt();
-        System.out.print("Introdueix quantitat a repostar: ");
-        int quantitatRepostar = sc.nextInt();
-        System.out.println();
+        int codiRepostarStock = sc.nextInt();//Variable que guarda el codi a repostar.
 
-        Application.llistaStockProducte[codiRepostarStock] += quantitatRepostar;
-        System.out.println("**********************CANVI REALITZAT**********************");
-        System.out.println();
-        Application.impressio(Application.llistaNomProducte, Application.llistaPreuProducte, Application.llistaStockProducte);
+        while(codiRepostarStock!=99){//Bucle per anar demanant stock a respotar, en cas d'introduir el codi 99 sortirà del manteniment.
+
+            while(codiRepostarStock<0 && codiRepostarStock>9){//En cas d'introduir un codi incorrecte.
+                System.out.println("*********************ERROR*********************");
+                System.out.println("El codi introduït és incorrecte.");
+                System.out.print("Sisplau introdueix el codi del producte: ");
+                codiRepostarStock=sc.nextInt();
+            }
+
+            System.out.print("Introdueix quantitat a repostar: ");
+            int quantitatRepostar = sc.nextInt(); //Variable que guarda la quantitat de producte que es repsotarà.
+            System.out.println();
+    
+            Application.llistaStockProducte[codiRepostarStock] += quantitatRepostar; //Suma de la quantitat que es vol afegir a la ja existent.
+            System.out.println("**********************CANVI REALITZAT**********************");
+            System.out.println();
+            Application.impressio(Application.llistaNomProducte, Application.llistaPreuProducte, Application.llistaStockProducte);//Impressió.
+            System.out.println("Per sortir introduïr codi 99.");
+
+            System.out.print("Codi producte: "); //Tornar a demanar el codi d'un producte en cas de voler repostar un altre.
+            codiRepostarStock = sc.nextInt();
+        }
     }
     public static void repostarMoneder(){
 
