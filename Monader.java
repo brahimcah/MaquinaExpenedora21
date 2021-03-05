@@ -9,6 +9,7 @@ public class monader {
      * */
     public static int[] StockMonedes = {18,23,20,15,18,15};
 
+
     public static String comMonedesStock(double cambi, int StockMonedes[]){
         int tornar = (int) (cambio * 100);
 
@@ -45,3 +46,4 @@ public class monader {
             tornar%= 5;
         }
     }}
+
