@@ -9,40 +9,39 @@ public class monader {
      * */
     public static int[] StockMonedes = {18,23,20,15,18,15};
 
-    public static String comMonedesStock(int codi, int StockMonedes[]){
-        double cambio = 1.65;
-        int devolver = (int) (cambio * 100);
+    public static String comMonedesStock(double cambi, int StockMonedes[]){
+        int tornar = (int) (cambi * 100);
 
         System.out.println("El cambi és "  + cambio + " monedes a tornar");
         // para cada moneda
-        if (devolver >= 200) {
-            StockMonedes[0] = StockMonedes[0] - (devolver / 200);
-            System.out.println("Monedes de 2 euros: " + devolver / 200);
-            devolver %= 200;            
+        if (tornar >= 200) {
+            StockMonedes[0] = StockMonedes[0] - tornar/ 200);
+            System.out.println("Monedes de 2 euros: " + tornar/ 200);
+            tornar%= 200;            
         }
-         if (devolver >= 100) {
-             StockMonedes[1] = StockMonedes[1] - (devolver / 200);
-            System.out.println("Monedes de 1 euro:" + devolver / 100);
-            devolver %= 100;
+         if (tornar >= 100) {
+             StockMonedes[1] = StockMonedes[1] - tornar/ 200);
+            System.out.println("Monedes de 1 euro:" + tornar/ 100);
+            tornar %= 100;
         }
-        if (devolver >= 50) {
-            StockMonedes[2] = StockMonedes[2] - (devolver / 200);
-            System.out.println("Monedes de 50 centims:" + devolver / 50);
-            devolver %= 50;
+        if tornar>= 50) {
+            StockMonedes[2] = StockMonedes[2] - tornar/ 200);
+            System.out.println("Monedes de 50 centims:" + tornar/ 50);
+            tornar%= 50;
         }
-        if (devolver >= 20) {
-            StockMonedes[3] = StockMonedes[3] - (devolver / 200);
-            System.out.println("Monedes de 20 centims" + devolver / 20);
-            devolver %= 20;
+        if tornar>= 20) {
+            StockMonedes[3] = StockMonedes[3] - tornar/ 200);
+            System.out.println("Monedes de 20 centims" + tornar/ 20);
+            tornar%= 20;
         }
-        if (devolver >= 10) {
-            StockMonedes[4] = StockMonedes[4] - (devolver / 200);
-            System.out.println("Monedes de 10 centims:" + devolver / 10);
-            devolver %= 10;
+        if tornar>= 10) {
+            StockMonedes[4] = StockMonedes[4] - tornar/ 200);
+            System.out.println("Monedes de 10 centims:" + tornar/ 10);
+            tornar%= 10;
         }
-        if (devolver >= 5) {
-            StockMonedes[5] = StockMonedes[5] - (devolver / 200);
-            System.out.println("Monedes de 5 centims:" + devolver / 5);
-            devolver %= 5;
+        if tornar>= 5) {
+            StockMonedes[5] = StockMonedes[5] - tornar/ 200);
+            System.out.println("Monedes de 5 centims:" + tornar/ 5);
+            tornar%= 5;
         }
     }}
