@@ -10,37 +10,37 @@ public class monader {
     public static int[] StockMonedes = {18,23,20,15,18,15};
 
     public static String comMonedesStock(double cambi, int StockMonedes[]){
-        int tornar = (int) (cambi * 100);
+        int tornar = (int) (cambio * 100);
 
         System.out.println("El cambi és "  + cambio + " monedes a tornar");
-        // para cada moneda
+
         if (tornar >= 200) {
-            StockMonedes[0] = StockMonedes[0] - tornar/ 200);
+            StockMonedes[0] = StockMonedes[0] - (tornar / 200);
             System.out.println("Monedes de 2 euros: " + tornar/ 200);
             tornar%= 200;            
         }
          if (tornar >= 100) {
-             StockMonedes[1] = StockMonedes[1] - tornar/ 200);
+             StockMonedes[1] = StockMonedes[1] - (tornar / 200);
             System.out.println("Monedes de 1 euro:" + tornar/ 100);
             tornar %= 100;
         }
-        if tornar>= 50) {
-            StockMonedes[2] = StockMonedes[2] - tornar/ 200);
+        if (tornar>= 50) {
+            StockMonedes[2] = StockMonedes[2] - (tornar / 200);
             System.out.println("Monedes de 50 centims:" + tornar/ 50);
             tornar%= 50;
         }
-        if tornar>= 20) {
-            StockMonedes[3] = StockMonedes[3] - tornar/ 200);
+        if (tornar>= 20) {
+            StockMonedes[3] = StockMonedes[3] - (tornar / 200);
             System.out.println("Monedes de 20 centims" + tornar/ 20);
             tornar%= 20;
         }
-        if tornar>= 10) {
-            StockMonedes[4] = StockMonedes[4] - tornar/ 200);
+        if (tornar>= 10) {
+            StockMonedes[4] = StockMonedes[4] - (tornar / 200);
             System.out.println("Monedes de 10 centims:" + tornar/ 10);
             tornar%= 10;
         }
-        if tornar>= 5) {
-            StockMonedes[5] = StockMonedes[5] - tornar/ 200);
+        if (tornar>= 5) {
+            StockMonedes[5] = StockMonedes[5] - (tornar/ 200);
             System.out.println("Monedes de 5 centims:" + tornar/ 5);
             tornar%= 5;
         }
