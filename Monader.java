@@ -10,4 +10,39 @@ public class monader {
     public static int[] StockMonedes = {18,23,20,15,18,15};
 
     public static String comMonedesStock(int codi, int StockMonedes[]){
-    }
+        double cambio = 1.65;
+        int devolver = (int) (cambio * 100);
+
+        System.out.println("El cambi és "  + cambio + " monedes a tornar");
+        // para cada moneda
+        if (devolver >= 200) {
+            StockMonedes[0] = StockMonedes[0] - (devolver / 200);
+            System.out.println("Monedes de 2 euros: " + devolver / 200);
+            devolver %= 200;            
+        }
+         if (devolver >= 100) {
+             StockMonedes[1] = StockMonedes[1] - (devolver / 200);
+            System.out.println("Monedes de 1 euro:" + devolver / 100);
+            devolver %= 100;
+        }
+        if (devolver >= 50) {
+            StockMonedes[2] = StockMonedes[2] - (devolver / 200);
+            System.out.println("Monedes de 50 centims:" + devolver / 50);
+            devolver %= 50;
+        }
+        if (devolver >= 20) {
+            StockMonedes[3] = StockMonedes[3] - (devolver / 200);
+            System.out.println("Monedes de 20 centims" + devolver / 20);
+            devolver %= 20;
+        }
+        if (devolver >= 10) {
+            StockMonedes[4] = StockMonedes[4] - (devolver / 200);
+            System.out.println("Monedes de 10 centims:" + devolver / 10);
+            devolver %= 10;
+        }
+        if (devolver >= 5) {
+            StockMonedes[5] = StockMonedes[5] - (devolver / 200);
+            System.out.println("Monedes de 5 centims:" + devolver / 5);
+            devolver %= 5;
+        }
+    }}
