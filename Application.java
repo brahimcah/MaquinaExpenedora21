@@ -16,7 +16,7 @@ public class Application{
     //Funció que imprimeix el contingut de la màquina.
     public static void impressio(String[] NomProducte, double[] PreuProducte, int[] StockProducte){
         for(int i=0;i<10;i++){
-            System.out.println("Codi: "+ i +" | Producte: " + NomProducte[i] + " | Preu: " + PreuProducte[i] + "€ | Quantitat disponible: " + StockProducte[i]);
+            System.out.println("Codi: "+ i +" || Producte: " + NomProducte[i] + " || Preu: " + PreuProducte[i] + "€ || Quantitat disponible: " + StockProducte[i]);
             System.out.println("--------------------------------------------------------------------------------------");
         }
     }
@@ -30,9 +30,8 @@ public class Application{
         Stock.assignacioPreuProductes();
         Stock.assignacioStockProductes();
 
-        impressio(llistaNomProducte, llistaPreuProducte, llistaStockProducte);//Impressió dels productes.
-
         do{
+            impressio(llistaNomProducte, llistaPreuProducte, llistaStockProducte);//Impressió dels productes.
             System.out.print("Sisplau introdueix el codi del producte: ");
             codi=sc.nextInt();
 
