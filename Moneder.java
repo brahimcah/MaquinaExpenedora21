@@ -1,4 +1,4 @@
-public class monader {
+public class Moneder {
     /**
      * Posició 0: Monedes de 2,00€
      * Posició 1: Monedes de 1,00€
