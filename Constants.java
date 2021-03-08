@@ -3,5 +3,5 @@ public class Constants{
 
     public static int PASSWORD = 9876;
 
-    public static int MAX_NUM_MONEDES = 30;
+    public static int NUM_MONEDES_ACCEPTADES = 5;
 }

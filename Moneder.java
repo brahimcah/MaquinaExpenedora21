@@ -7,13 +7,12 @@ public class Moneder {
      * Posició 4: Monedes de 0,10€
      * Posició 5: Monedes de 0,05€
      * */
-    public static int[] StockMonedes = {18,23,20,15,18,15};
 
+//GUARDAR EN UNA VARIABLE LES MONEDES PER POSTERIORMENT MOSTRARLES AL MAIN
+    public static String comMonedesStock(double canvi, int StockMonedes[]){
+        int tornar = (int) (canvi * 100);
 
-    public static String comMonedesStock(double cambi, int StockMonedes[]){
-        int tornar = (int) (cambio * 100);
-
-        System.out.println("El cambi és "  + cambio + " monedes a tornar");
+        System.out.println("El cambi és "  + canvi + " monedes a tornar");
 
         if (tornar >= 200) {
             StockMonedes[0] = StockMonedes[0] - (tornar / 200);

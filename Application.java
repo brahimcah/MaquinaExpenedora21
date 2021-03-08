@@ -9,6 +9,9 @@ public class Application{
     //Declaració array públic amb la quantitat d'estoc.
     public static int[] llistaStockProducte = new int[Constants.MAX_NUM_ARTICLES];
 
+    //Declaració array públic amb la quantitat de monedes de cada tipus.
+    public static int[] llistaStockMonedes = new int[Constants.NUM_MONEDES_ACCEPTADES];
+
     // public static void retornarNomProducte(String[] NomProducte){
     //     System.out.println(NomProducte[1]);
     // }

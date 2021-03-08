@@ -45,4 +45,20 @@ public class Stock {
         Application.llistaStockProducte[8] = 11;
         Application.llistaStockProducte[9] = 12;
     }
+    public static void assignacioStockMonedes(){
+        /**
+         * Posició 0: Monedes de 2,00€
+         * Posició 1: Monedes de 1,00€
+         * Posició 2: Monedes de 0,50€
+         * Posició 3: Monedes de 0,20€
+         * Posició 4: Monedes de 0,10€
+         * Posició 5: Monedes de 0,05€
+         * */
+        Application.llistaStockMonedes[0] = 18;
+        Application.llistaStockMonedes[1] = 23;
+        Application.llistaStockMonedes[2] = 20;
+        Application.llistaStockMonedes[3] = 15;
+        Application.llistaStockMonedes[4] = 18;
+        Application.llistaStockMonedes[5] = 15;
+    }
 }
