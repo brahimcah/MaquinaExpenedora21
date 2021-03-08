@@ -27,8 +27,14 @@ public class Diners{
         System.out.println("Posició 4: Moneda de 0,10€");
         System.out.println("Posició 5: Moneda de 0,05€");
 
+
+    while(EurosAmbCent >= Stock.ComprovacioPreuProducte(int codi)){ // Creacio de un while per poder determinar si el valor de les numero de monedes entrades es mes gran o igual al valor en € del producte
+
+
         System.out.print("Introdueix el numero de monedes que vol gastar?");
         diners = lector.nextInt(); //Preguntem al usuari per quantes monedes vol gastar, aixi obtindrem el limit de monedes que introduïra el nostre usuari
+
+
 
         double[] IndexMonedes = new double[6]; //Assignem les dades del array manualment per despres identificar el tipus de moneda
 
@@ -40,71 +46,72 @@ public class Diners{
             IndexMonedes[5] = 0,05;
 
 
-            int[] MonedesEntrades = new int[diners];
+            int[] MonedesEntrades = new int[diners]; //Array per guardar les monedes amb valor del usuari
 
         //Creem un for per poder recollir la informacio de les monedes que introdueix el nostre usuari
         for(int i = 0; i < MonedesEntrades.length; i++){
 
+            
                 System.out.println("Selecciona les monedes que desitjes entrar a la maquina(0-5): ");
-                 MonedesEntrades[i] = lector.nextDouble(); //
+                 MonedesEntrades[i] = lector.nextDouble(); //Amb aquest lector oferim al nostre client poder seleccionar un numero de el 0-5 i guardem els numeros entrats en el array MonedesEntrades
 
                 switch (MonedesEntrades) { //Creacio de un switch per poder diferenciar les diferentes opcions entrades del usuari amb el index de Monedes i despres assiganr 
 
-                    case 0:
+                    case 0: //En el cas de que el usuari entres el numero 0 faria referencia que esta entrant una moneda de 2€
 
-                        EurosAmbCent + IndexMonedes[0]; 
+                         EurosAmbCent += IndexMonedes[0]; 
 
                         break;
 
-                    case 1:
-                        EurosAmbCent + IndexMonedes[1];
+                    case 1: //En el cas de que el usuari entres el numero 0 faria referencia que esta entrant una moneda de 1€
+                         EurosAmbCent += IndexMonedes[1];
                         break;
 
-                    case 2:
-                        EurosAmbCent + IndexMonedes[2];
+                    case 2: //En el cas de que el usuari entres el numero 0 faria referencia que esta entrant una moneda de 0,50€
+                         EurosAmbCent += IndexMonedes[2];
                         break;
 
-                    case 3:
-                        EurosAmbCent + IndexMonedes[3];
+                    case 3: //En el cas de que el usuari entres el numero 0 faria referencia que esta entrant una moneda de 0,20€
+                         EurosAmbCent += IndexMonedes[3];
                         break;
 
-                    case 4:
-                        EurosAmbCent + IndexMonedes[4];
+                    case 4: //En el cas de que el usuari entres el numero 0 faria referencia que esta entrant una moneda de 0,10;
+                         EurosAmbCent += IndexMonedes[4];
                         break;
 
-                    case 5:
-                        EurosAmbCent + IndexMonedes[5];
+                    case 5: //En el cas de que el usuari entres el numero 0 faria referencia que esta entrant una moneda de 0,05€
+                         EurosAmbCent += IndexMonedes[5];
 
                     default:
 
+                        System.out.print("ERROR!")
+
                         break;
                 }
-
-
             }
-
         }
 
 
-        return diners;
-    }
 
-    public static int canvi(int preu, int diners){
+
+            return diners;
+        }
+
+    public static int canvi(double EurosAmbCent){
 
         /**
-         * @method Comprovacio de si hem de tornar canvi al nostre client
+         * @method Amb aquesta funcio podem fer la operacio per poder coneixer la resta de els diners entrats EurosAmbCent(variable double) - Stock.ComprovacioPreuProducte(int codi)
          * 
          */
 
+        double restant
 
-        int restant = 0; 
-                
-         restant = diners - Stock.ComprovacioPreuProducte(int codi); //  Assignem a la variable creada  la operacio per poder determinar si hem de tornar canvi o no
+        restant = EurosAmbCent - Stock.ComprovacioPreuProducte(int codi);
 
         return restant;
 
     }
-
+    /** 
     public static int moneder(int preu){
 
         Scanner lector = new Scanner(System.in);
@@ -126,16 +133,13 @@ public class Diners{
         }
 
 
-        /**
-         * @method 
-         * 
-         */
+
 
     
 
 
 
 
-    }
+    }*/ 
 
 }
