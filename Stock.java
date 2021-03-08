@@ -9,7 +9,7 @@ public class Stock {
         }
     }
     
-    public static void assignacioNomProduces(){
+    public static void assignacioNomProductes(){
         Application.llistaNomProducte[0] = "Chips Casolanes";
         Application.llistaNomProducte[1] = "Xocolata amb Ametlles";
         Application.llistaNomProducte[2] = "Coca-Cola";
