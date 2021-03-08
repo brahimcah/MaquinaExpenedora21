@@ -89,7 +89,6 @@ public class Manteniment{
             System.out.println("Per sortir introduïr codi 99.");
             System.out.print("Codi producte: "); //Tornar a demanar el codi d'un producte en cas de voler repostar un altre.
             codiRepostarMonedes = sc.nextInt();
-            System.out.println("--------------------------------------------------------------------------------------");
         }
     }
 }
