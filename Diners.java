@@ -38,12 +38,12 @@ public class Diners{
 
         double[] IndexMonedes = new double[6]; //Assignem les dades del array manualment per despres identificar el tipus de moneda
 
-            IndexMonedes[0] = 2,00;
-            IndexMonedes[1] = 1,00;
-            IndexMonedes[2] = 0,50;
-            IndexMonedes[3] = 0,20;
-            IndexMonedes[4] = 0,10;
-            IndexMonedes[5] = 0,05;
+            IndexMonedes[0] = 2.00;
+            IndexMonedes[1] = 1.00;
+            IndexMonedes[2] = 0.50;
+            IndexMonedes[3] = 0.20;
+            IndexMonedes[4] = 0.10;
+            IndexMonedes[5] = 0.05;
 
 
             int[] MonedesEntrades = new int[diners]; //Array per guardar les monedes amb valor del usuari
@@ -56,7 +56,7 @@ public class Diners{
             
             do{
 
-                 MonedesEntrades[i] = lector.nextDouble(); //Amb aquest lector oferim al nostre client poder seleccionar un numero de el 0-5 i guardem els numeros entrats en el array MonedesEntrades
+                 MonedesEntrades[i] = lector.nextInt(); //Amb aquest lector oferim al nostre client poder seleccionar un numero de el 0-5 i guardem els numeros entrats en el array MonedesEntrades
                  
               }while(MonedesEntrades[i]! <0 && MonedesEntrades[i]!>5); //Farem una funcio do while per fer una restriccio que no permeti al usuari entrar un numero que sigui inferior a 0 i que no sigui mes gran que 5
 
