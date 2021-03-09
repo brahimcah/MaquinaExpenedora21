@@ -119,7 +119,7 @@ public class Diners{
             }else //En el cas de que no h hagi canvi fara un return de -1
             {
 
-                return -1;
+                return 1;
 
             }
         }
