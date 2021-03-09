@@ -9,9 +9,10 @@ public class Application{
     //Declaració array públic amb la quantitat d'estoc.
     public static int[] llistaStockProducte = new int[Constants.MAX_NUM_ARTICLES];
 
-    //Declaració array públic amb la quantitat de monedes de cada tipus.
-    public static int[] llistaStockMonedes = new int[Constants.NUM_MONEDES_ACCEPTADES];
-
+    // public static void retornarNomProducte(String[] NomProducte){
+    //     System.out.println(NomProducte[1]);
+    // }
+    
     //Funció que imprimeix el contingut de la màquina.
     public static void impressio(String[] NomProducte, double[] PreuProducte, int[] StockProducte){
         for(int i=0;i<10;i++){
@@ -19,27 +20,15 @@ public class Application{
             System.out.println("--------------------------------------------------------------------------------------");
         }
     }
-
-    //Funció que imprimeix l'estoc de les monedes.
-    public static void impressioMonedes(int [] llistaStockMonedes){
-        System.out.println("Codi monedes de 2€: 0  ||  Quantitat actual: " + llistaStockMonedes[0]);
-        System.out.println("Codi monedes de 1€: 1  ||  Quantitat actual: " + llistaStockMonedes[1]);
-        System.out.println("Codi monedes de 0,50€: 2  ||  Quantitat actual: " + llistaStockMonedes[2]);
-        System.out.println("Codi monedes de 0,20€: 3  ||  Quantitat actual: " + llistaStockMonedes[3]);
-        System.out.println("Codi monedes de 0,10€: 4  ||  Quantitat actual: " + llistaStockMonedes[4]);
-        System.out.println("Codi monedes de 0,05€: 5  ||  Quantitat actual: " + llistaStockMonedes[5]);
-    }
-    
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         boolean infinit = true; //Variable per fer un bucle infinit en el 'while'.
         int codi = 0; //Inicialització de la variable codi.
         
         //Assignacions dels valors dels Arrays
-        Stock.assignacioNomProductes();
+        Stock.assignacioNomProduces();
         Stock.assignacioPreuProductes();
         Stock.assignacioStockProductes();
-        Stock.assignacioStockMonedes();
 
         do{
             impressio(llistaNomProducte, llistaPreuProducte, llistaStockProducte);//Impressió dels productes.
