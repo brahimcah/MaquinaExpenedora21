@@ -7,7 +7,7 @@ public class Diners{
         
         /**
          * 
-         * @method Impressio de pantalla del preu del producte i solicita el preu que vol introduir el client
+         * @method Aquesta funcio te la finalitat de poder coneixer si hem de retornar canvi al nostra client o no
          */
 
         Scanner lector = new Scanner(System.in);
@@ -138,35 +138,4 @@ public class Diners{
         return restant;
 
     }
-    /** 
-    public static int moneder(int preu){
-
-        Scanner lector = new Scanner(System.in);
-
-    int dinsMoneder = 0;  //Variable per poder detectar els dieners que hi han dins del moneder 
-    int introduirMonedes = 0;  // Variable per si es dones el cas de que ha de introduir diners per poder acabar de pagar el producte
-        
-    dinsMoneder = canvi(int preu, int diners);
-
-        if(dins < 0)
-        {
-            System.out.println("Falta pagar" + dinsMoneder(int preu, int diners));
-
-            System.out.println("Introdueix els diners que creguis convenients");
-                introduirMonedes = lector.nextInt(); //Solicitem al usuari quantes monedes vol introduir
-        }else
-        {
-
-        }
-
-
-
-
-    
-
-
-
-
-    }*/ 
-
 }
