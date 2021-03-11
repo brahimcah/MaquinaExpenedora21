@@ -17,7 +17,7 @@ public class Diners{
 
         double EurosAmbCent = 0;
 
-        System.out.print("El preu del producte es" + Stock.ComprovacioPreuProducte(int codi)); //Impressio de el preu del producte seleccionat
+        System.out.print("El preu del producte es" + Application.llistaPreuProducte[codi]); //Impressio de el preu del producte seleccionat
 
         System.out.print("Nomes acceptem les monedes següents"); //Imprimim les uniques monedes que acceptem per que es pugui seleccionar un dels nostres productes
         System.out.println("Posició 0: Moneda de 2,00€");
@@ -28,7 +28,7 @@ public class Diners{
         System.out.println("Posició 5: Moneda de 0,05€");
 
 
-    while(EurosAmbCent >= Stock.ComprovacioPreuProducte(int codi)){ // Creacio de un while per poder determinar si el valor de les numero de monedes entrades es mes gran o igual al valor en € del producte
+    while(EurosAmbCent >= Application.llistaPreuProducte[codi]){ // Creacio de un while per poder determinar si el valor de les numero de monedes entrades es mes gran o igual al valor en € del producte
 
 
         System.out.print("Introdueix el numero de monedes que vol gastar?");
@@ -58,10 +58,10 @@ public class Diners{
 
                  MonedesEntrades[i] = lector.nextInt(); //Amb aquest lector oferim al nostre client poder seleccionar un numero de el 0-5 i guardem els numeros entrats en el array MonedesEntrades
                  
-              }while(MonedesEntrades[i]! <0 && MonedesEntrades[i]!>5); //Farem una funcio do while per fer una restriccio que no permeti al usuari entrar un numero que sigui inferior a 0 i que no sigui mes gran que 5
+              }while(MonedesEntrades[i] >=0 && MonedesEntrades[i]<=5); //Farem una funcio do while per fer una restriccio que no permeti al usuari entrar un numero que sigui inferior a 0 i que no sigui mes gran que 5
 
 
-                switch (MonedesEntrades) { //Creacio de un switch per poder diferenciar les diferentes opcions entrades del usuari amb el index de Monedes i despres assiganr 
+                switch (MonedesEntrades[i]) { //Creacio de un switch per poder diferenciar les diferentes opcions entrades del usuari amb el index de Monedes i despres assiganr 
 
                     case 0: //En el cas de que el usuari entres el numero 0 faria referencia que esta entrant una moneda de 2€
 
@@ -99,22 +99,23 @@ public class Diners{
 
                     default:
 
-                        System.out.print("ERROR!")
+                        System.out.print("ERROR!");
 
                         break;
                 }
             }
         }
 
-           boolean CanviExistent = false; 
+            lector.close();
 
-           CanviExistent = comMonedesStock(double canvi, int StockMonedes[]);
+            double canvi = 0;;
 
            //Creem un condicional per poder determinar si hi ha canvi o no
-            if(CanviExistent == true) //En el cas de canvi fara un return de la funcio canvi
+            
+            if(Moneder.comMonedesStock(canvi)) //En el cas de canvi fara un return de la funcio canvi
             {
 
-                return canvi(double EurosAmbCent);
+                return canvi(EurosAmbCent, codi);
 
             }else //En el cas de que no h hagi canvi fara un return de -1
             {
@@ -124,16 +125,16 @@ public class Diners{
             }
         }
 
-    public static double canvi(double EurosAmbCent){
+    public static double canvi(double EurosAmbCent, int codi){
 
         /**
          * @method Amb aquesta funcio podem fer la operacio per poder coneixer la resta de els diners entrats EurosAmbCent(variable double) - Stock.ComprovacioPreuProducte(int codi)
          * 
          */
 
-        double restant
+        double restant = 0;
 
-        restant = EurosAmbCent - Stock.ComprovacioPreuProducte(int codi);
+        restant = EurosAmbCent - Application.llistaPreuProducte[codi];
 
         return restant;
 
