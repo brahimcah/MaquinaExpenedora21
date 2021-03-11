@@ -17,9 +17,16 @@ public class Diners{
 
         double EurosAmbCent = 0;
 
-        System.out.print("El preu del producte es" + Application.llistaPreuProducte[codi]); //Impressio de el preu del producte seleccionat
+        System.out.println("El preu del producte es " + Application.llistaPreuProducte[codi]); //Impressio de el preu del producte seleccionat
 
-        System.out.print("Nomes acceptem les monedes següents"); //Imprimim les uniques monedes que acceptem per que es pugui seleccionar un dels nostres productes
+        System.out.println(" ");
+            
+        System.out.println("--------------------------------------------------------------------------------------");
+
+        
+
+
+        System.out.println("Nomes acceptem les monedes següents"); //Imprimim les uniques monedes que acceptem per que es pugui seleccionar un dels nostres productes
         System.out.println("Posició 0: Moneda de 2,00€");
         System.out.println("Posició 1: Moneda de 1,00€");
         System.out.println("Posició 2: Moneda de 0,50€");
@@ -27,13 +34,12 @@ public class Diners{
         System.out.println("Posició 4: Moneda de 0,10€");
         System.out.println("Posició 5: Moneda de 0,05€");
 
+        System.out.println("--------------------------------------------------------------------------------------");
 
-    while(EurosAmbCent >= Application.llistaPreuProducte[codi]){ // Creacio de un while per poder determinar si el valor de les numero de monedes entrades es mes gran o igual al valor en € del producte
-
-
-        System.out.print("Introdueix el numero de monedes que vol gastar?");
+        System.out.print("Quantes monedes vol introduïr?");
         diners = lector.nextInt(); //Preguntem al usuari per quantes monedes vol gastar, aixi obtindrem el limit de monedes que introduïra el nostre usuari
 
+        lector.nextLine(); //Salt de linea per evitar que les dades surtin fora del array
 
 
         double[] IndexMonedes = new double[6]; //Assignem les dades del array manualment per despres identificar el tipus de moneda
@@ -54,11 +60,9 @@ public class Diners{
             
                 System.out.println("Selecciona les monedes que desitjes entrar a la maquina(0-5): ");
             
-            do{
 
                  MonedesEntrades[i] = lector.nextInt(); //Amb aquest lector oferim al nostre client poder seleccionar un numero de el 0-5 i guardem els numeros entrats en el array MonedesEntrades
                  
-              }while(MonedesEntrades[i] >=0 && MonedesEntrades[i]<=5); //Farem una funcio do while per fer una restriccio que no permeti al usuari entrar un numero que sigui inferior a 0 i que no sigui mes gran que 5
 
 
                 switch (MonedesEntrades[i]) { //Creacio de un switch per poder diferenciar les diferentes opcions entrades del usuari amb el index de Monedes i despres assiganr 
@@ -97,21 +101,23 @@ public class Diners{
 
                          EurosAmbCent += IndexMonedes[5];
 
+                         break;
                     default:
 
                         System.out.print("ERROR!");
 
                         break;
                 }
-            }
+            
         }
 
             lector.close();
 
-            double canvi = 0;;
+            double canvi = 0;
 
-           //Creem un condicional per poder determinar si hi ha canvi o no
-            
+           //Creem un condicional per poder determinar si hi ha canvi o no  
+
+
             if(Moneder.comMonedesStock(canvi)) //En el cas de canvi fara un return de la funcio canvi
             {
 
@@ -120,9 +126,10 @@ public class Diners{
             }else //En el cas de que no h hagi canvi fara un return de -1
             {
 
-                return 1;
+                return -1;
 
-            }
+            } 
+
         }
 
     public static double canvi(double EurosAmbCent, int codi){
