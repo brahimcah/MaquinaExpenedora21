@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 public class Application{
     //Declaració array públic amb el nom dels productes.
     public static String[] llistaNomProducte = new String[Constants.MAX_NUM_ARTICLES];
@@ -20,6 +21,16 @@ public class Application{
         }
     }
 
+    //Funcio que fa un delay donats uns segons.
+    public static void delaySegons(int segons){
+        segons *= 1000;
+        try {
+            Thread.sleep(segons);
+            } 
+        catch(InterruptedException ex){
+            Thread.currentThread().interrupt();
+            }
+    }
     //Funció que imprimeix l'estoc de les monedes.
     public static void impressioMonedes(int [] llistaStockMonedes){
         System.out.println("Codi monedes de 2€: 0  ||  Quantitat actual: " + llistaStockMonedes[0]);
@@ -62,22 +73,27 @@ public class Application{
                     System.out.println("*********************ERROR*********************");
                     System.out.println("Contrasenya incorrecta.");
                     System.out.println();
+                    delaySegons(1);
                 }
             }else{
                 if(Stock.comprovacioStock(codi)!="?"){//Comprovació de Stock, en cas d'haver Stock es seguirà amb el programa
                     
                     //Comprovació de diners a introduir, en cas d'haver canvi i una introducció d'aquests correcte es retorna el producte
                     if(Diners.diners(codi)>=0){
-                        System.out.println("Aquí tens el teu producte" + llistaNomProducte[codi]);
+                        System.out.println("--------------------------------------------------------------------------------------");
+                        System.out.println("Aquí tens el teu producte: " + llistaNomProducte[codi]);
+                        System.out.println();
+                        delaySegons(1);
+                        llistaStockProducte[codi]--;
                     }else{//En cas de no tenir canvi del producte solicitat.
                         System.out.println("*********************ERROR*********************");
                         System.out.println("Ho sentim però no tenim canvi. Sisplau torna o canvia de producte.");
-                        codi = 10;
+                        delaySegons(1);
                     }
                 }else{//En cas de no tenir estoc del producte solicitat.
                     System.out.println("*********************ERROR*********************");
                     System.out.println("El producte sol·licitat no te estoc, siusplau introdueix un nou altre producte.");
-                    codi = 10;
+                    delaySegons(1);
                 }
             }
         }while(infinit);
