@@ -12,9 +12,11 @@ public class Moneder {
     public static int[] llistaStockMonedesProvisional =  new int[Constants.NUM_MONEDES_ACCEPTADES];
 
     public static boolean comMonedesStock(double canvi){
+        //Torna 
         int tornar = (int) (canvi * 100);
         Stock.assignacioStockMonedesProvisionals();
 
+        //Indiquem el canvi abans de començar de comprobar la moneda
         System.out.println("El canvi és "  + canvi + " monedes a tornar");
 
         //Comprobador de 2 euros
