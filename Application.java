@@ -41,46 +41,55 @@ public class Application{
         Stock.assignacioStockProductes();
         Stock.assignacioStockMonedes();
 
-        do{
-            impressio(llistaNomProducte, llistaPreuProducte, llistaStockProducte);//Impressió dels productes.
-            System.out.print("Sisplau introdueix el codi del producte: ");
-            codi=sc.nextInt();
+        double canvi = 100;
+        System.out.println(Moneder.comMonedesStock(canvi));
 
-            while((codi<0 || codi>9) && codi!=99 ){//Si s'introdueix un codi erroni es torna a demanar.
-                System.out.println("*********************ERROR*********************");
-                System.out.println("El codi introduït és incorrecte.");
-                System.out.print("Sisplau introdueix el codi del producte: ");
-                codi=sc.nextInt();
-            }
 
-            if(codi==99){ //Per accedir a manteniment.
-                System.out.print("Introdueix la contrasenya: ");
-                int contrasenya = sc.nextInt();
-                if(contrasenya==Constants.PASSWORD){
-                    Manteniment.manteniment();
-                }else{ //En cas de possar malament la contrasenya és torna a demanar el producte.
-                    System.out.println("*********************ERROR*********************");
-                    System.out.println("Contrasenya incorrecta.");
-                    System.out.println();
-                }
-            }else{
-                if(Stock.comprovacioStock(codi)!="?"){//Comprovació de Stock, en cas d'haver Stock es seguirà amb el programa
+
+        for(int i=0; i<Constants.NUM_MONEDES_ACCEPTADES;i++){
+            System.out.println("Provisional:" + i);
+            System.out.println(Moneder.llistaStockMonedesProvisional[i]);
+        }
+        // do{
+        //     impressio(llistaNomProducte, llistaPreuProducte, llistaStockProducte);//Impressió dels productes.
+        //     System.out.print("Sisplau introdueix el codi del producte: ");
+        //     codi=sc.nextInt();
+
+        //     while((codi<0 || codi>9) && codi!=99 ){//Si s'introdueix un codi erroni es torna a demanar.
+        //         System.out.println("*********************ERROR*********************");
+        //         System.out.println("El codi introduït és incorrecte.");
+        //         System.out.print("Sisplau introdueix el codi del producte: ");
+        //         codi=sc.nextInt();
+        //     }
+
+        //     if(codi==99){ //Per accedir a manteniment.
+        //         System.out.print("Introdueix la contrasenya: ");
+        //         int contrasenya = sc.nextInt();
+        //         if(contrasenya==Constants.PASSWORD){
+        //             Manteniment.manteniment();
+        //         }else{ //En cas de possar malament la contrasenya és torna a demanar el producte.
+        //             System.out.println("*********************ERROR*********************");
+        //             System.out.println("Contrasenya incorrecta.");
+        //             System.out.println();
+        //         }
+        //     }else{
+        //         if(Stock.comprovacioStock(codi)!="?"){//Comprovació de Stock, en cas d'haver Stock es seguirà amb el programa
                     
-                    //Comprovació de diners a introduir, en cas d'haver canvi i una introducció d'aquests correcte es retorna el producte
-                    if(Diners.diners(codi)>=0){
-                        System.out.println("Aquí tens el teu producte" + llistaNomProducte[codi]);
-                    }else{//En cas de no tenir canvi del producte solicitat.
-                        System.out.println("*********************ERROR*********************");
-                        System.out.println("Ho sentim però no tenim canvi. Sisplau torna o canvia de producte.");
-                        codi = 10;
-                    }
-                }else{//En cas de no tenir estoc del producte solicitat.
-                    System.out.println("*********************ERROR*********************");
-                    System.out.println("El producte sol·licitat no te estoc, siusplau introdueix un nou altre producte.");
-                    codi = 10;
-                }
-            }
-        }while(infinit);
+        //             //Comprovació de diners a introduir, en cas d'haver canvi i una introducció d'aquests correcte es retorna el producte
+        //             if(Diners.diners(codi)>=0){
+        //                 System.out.println("Aquí tens el teu producte" + llistaNomProducte[codi]);
+        //             }else{//En cas de no tenir canvi del producte solicitat.
+        //                 System.out.println("*********************ERROR*********************");
+        //                 System.out.println("Ho sentim però no tenim canvi. Sisplau torna o canvia de producte.");
+        //                 codi = 10;
+        //             }
+        //         }else{//En cas de no tenir estoc del producte solicitat.
+        //             System.out.println("*********************ERROR*********************");
+        //             System.out.println("El producte sol·licitat no te estoc, siusplau introdueix un nou altre producte.");
+        //             codi = 10;
+        //         }
+        //     }
+        // }while(infinit);
     }
 }
 
