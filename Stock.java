@@ -61,4 +61,38 @@ public class Stock {
         Application.llistaStockMonedes[4] = 18;
         Application.llistaStockMonedes[5] = 15;
     }
+    //Assignació d'estoc del array de monedes provisional
+    public static void assignacioStockMonedesProvisionals(){
+        /**
+         * Posició 0: Monedes de 2,00€
+         * Posició 1: Monedes de 1,00€
+         * Posició 2: Monedes de 0,50€
+         * Posició 3: Monedes de 0,20€
+         * Posició 4: Monedes de 0,10€
+         * Posició 5: Monedes de 0,05€
+         * */
+        Moneder.llistaStockMonedesProvisional[0] = Application.llistaStockMonedes[0];
+        Moneder.llistaStockMonedesProvisional[1] = Application.llistaStockMonedes[1];
+        Moneder.llistaStockMonedesProvisional[2] = Application.llistaStockMonedes[2];
+        Moneder.llistaStockMonedesProvisional[3] = Application.llistaStockMonedes[3];
+        Moneder.llistaStockMonedesProvisional[4] = Application.llistaStockMonedes[4];
+        Moneder.llistaStockMonedesProvisional[5] = Application.llistaStockMonedes[5];
+    }
+    //Funció que assigna la resta de les monedes al array de estoc monedes
+    public static void actualitzarStockMonedes(){
+        /**
+         * Posició 0: Monedes de 2,00€
+         * Posició 1: Monedes de 1,00€
+         * Posició 2: Monedes de 0,50€
+         * Posició 3: Monedes de 0,20€
+         * Posició 4: Monedes de 0,10€
+         * Posició 5: Monedes de 0,05€
+         * */
+        Application.llistaStockMonedes[0] = Moneder.llistaStockMonedesProvisional[0];
+        Application.llistaStockMonedes[1] = Moneder.llistaStockMonedesProvisional[1];
+        Application.llistaStockMonedes[2] = Moneder.llistaStockMonedesProvisional[2];
+        Application.llistaStockMonedes[3] = Moneder.llistaStockMonedesProvisional[3];
+        Application.llistaStockMonedes[4] = Moneder.llistaStockMonedesProvisional[4];
+        Application.llistaStockMonedes[5] = Moneder.llistaStockMonedesProvisional[5];
+    }
 }

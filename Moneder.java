@@ -7,10 +7,13 @@ public class Moneder {
      * Posició 4: Monedes de 0,10€
      * Posició 5: Monedes de 0,05€
      * */
-    public static int[] llistaStockMonedesProvisional =  Application.llistaStockMonedes;
+
+    //Array de resta i comprovació de si hi ha monedes a tornar disponibles
+    public static int[] llistaStockMonedesProvisional =  new int[Constants.NUM_MONEDES_ACCEPTADES];
 
     public static boolean comMonedesStock(double canvi){
         int tornar = (int) (canvi * 100);
+        Stock.assignacioStockMonedesProvisionals();
 
         System.out.println("El canvi és "  + canvi + " monedes a tornar");
 
@@ -18,7 +21,7 @@ public class Moneder {
         if (tornar >= 200) {
             llistaStockMonedesProvisional[0] = llistaStockMonedesProvisional[0] - (tornar / 200);
             System.out.println("Monedes de 2 euros: " + tornar/ 200);
-            tornar%= 200;            
+            tornar%= 200;           
         }
         //Comprobador de 1 euro
          if (tornar >= 100) {
@@ -50,22 +53,18 @@ public class Moneder {
             System.out.println("Monedes de 5 centims:" + tornar/ 5);
             tornar%= 5;
         }
-        for(int i=0; i<Constants.NUM_MONEDES_ACCEPTADES;i++){
-            System.out.println("Verdader:" + i);
-            System.out.println(Application.llistaStockMonedes[i]);
-        }
         return comptadorMonedes();
     }
     
+    //Funció de comprovació de si hi ha monedes a tornar.
     public static boolean comptadorMonedes(){
         for(int i=0;i<Constants.NUM_MONEDES_ACCEPTADES;i++){
             if(llistaStockMonedesProvisional[i]<0){//En cas de tenir monedes negatives vol dir que no tenim canvi a donar
-                llistaStockMonedesProvisional[i]=Application.llistaStockMonedes[i]; //Per tant tornem als valors origianls i retornem FALSE
+                Stock.assignacioStockMonedesProvisionals(); //Per tant tornem als valors origianls i retornem FALSE
                 return false;
             }
         }
-        System.out.println("AAAAAAAAAAAA");
-        Application.llistaStockMonedes=llistaStockMonedesProvisional;//Si tenim canvi doncs assignem el nou estoc de monedes i retornem TRUE
+        Stock.actualitzarStockMonedes();//Si tenim canvi doncs assignem el nou estoc de monedes i retornem TRUE
         return true;
     }
 }
