@@ -18,9 +18,7 @@ public class Diners{
         double EurosAmbCent = 0;
 
         System.out.println("El preu del producte es " + Application.llistaPreuProducte[codi]); //Impressio de el preu del producte seleccionat
-
-        System.out.println(" ");
-            
+  
         System.out.println("--------------------------------------------------------------------------------------");
 
         
@@ -36,7 +34,7 @@ public class Diners{
 
         System.out.println("--------------------------------------------------------------------------------------");
 
-        System.out.print("Quantes monedes vol introduïr?");
+        System.out.print("Quantes monedes vol introduïr? ");
         diners = lector.nextInt(); //Preguntem al usuari per quantes monedes vol gastar, aixi obtindrem el limit de monedes que introduïra el nostre usuari
 
         lector.nextLine(); //Salt de linea per evitar que les dades surtin fora del array
@@ -111,7 +109,7 @@ public class Diners{
             
         }
 
-            lector.close();
+            
 
             double canvi = 0;
 
